@@ -1,0 +1,168 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gloria+Hallelujah&family=PT+Mono&family=Tourney:wght@100;300;400&display=swap');
+*{
+    margin:0;
+    padding:0;
+    /* font-family: 'PT Mono', monospace; */
+}
+nav{
+    height:8vh;
+    background-color: black;
+    color:white;
+    display:flex;
+    align-items: center;
+    font-family: 'Tourney', cursive;
+}
+nav ul{
+    list-style-type: none;
+    margin-left:40px;
+    font-size:xx-large;
+    font-weight: 400;
+}
+
+
+.gameCointainer{
+    /* background-color: yellow; */
+    display:flex;
+    justify-content: space-around;
+    margin-top:50px;
+    /* position:relative; */
+}
+
+.cointainer{
+    display:grid;
+    /* to make a square and a grid of 3x3 */
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns:repeat(3,10vw) ;
+    font-family:sans-serif;
+    position: relative;
+}
+
+.box{
+    border:2px solid black;
+    font-size: 8vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(56, 0, 56);
+    cursor:pointer;
+    transition: all 0.2s;
+    font-family: 'Tourney', cursive;
+}
+
+.box:hover{
+    background-color: rgba(137, 43, 226, 0.199);
+}
+
+.gameInfo{
+    font-family: 'PT Mono', monospace;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content: flex-start;
+    gap:15px;
+}
+
+#turn{
+    font-weight: 900;
+}
+
+#reset{
+    font-family: 'PT Mono', monospace;
+    padding:5px 10px;
+    background: none;
+    border:2px solid rgb(56, 0, 56);
+    border-radius: 5px;
+    color:rgb(56, 0, 56);
+    transition:all 0.2s;
+    font-weight: 800;
+}
+
+#reset:hover{
+    background-color: rgba(56, 0, 56, 0.401);
+    color:rgb(83, 0, 83);
+}
+
+.gameInfo h1{
+    font-family: 'Tourney', cursive;
+}
+
+.imgbox{
+    align-self: flex-start;
+    margin:10px;
+}
+
+.imgbox img{
+    /* display:none; */
+    width:0;
+    transition:width 1s ease-in-out;
+}
+.changingInfo{
+    font-family: 'Tourney', cursive;
+    font-size: 1.5rem;
+}
+.boxtext{
+    transition:all 1s ease-in-out;
+}
+
+
+
+
+
+/* some utility classes ----------------------------------------------------------------------------------------------------------------------------*/
+
+.br-0{
+    /* border right zero */
+    border-right: 0px;
+}
+.bl-0{
+    border-left: 0px;
+}
+.bb-0{
+    border-bottom: 0px;
+}
+.bt-0{
+    border-top: 0px;
+}
+
+
+.line{
+    background-color: rgb(56, 0, 56);
+    width:0px;
+    position:absolute;
+    height:3px;
+    left:0;
+    transform: translate(23vw,39vw) rotate(90deg);
+    border-radius: 3px;
+    /* display:none; */
+    transition:width 1s ease-in-out;
+}
+
+
+
+@media  screen and (max-width:850px) {
+    .gameCointainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:40px;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+
+    .cointainer{
+        grid-template-rows: repeat(3,16vw);
+        grid-template-columns:repeat(3,16vw) ;
+    }
+
+    .box{
+        font-size: 13vw;
+    }
+    .line{
+        display:none;
+        width:0px;
+    }
+
+}
